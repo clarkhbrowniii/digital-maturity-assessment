@@ -1,148 +1,1423 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A Digital Maturity Index assessment for the flexible workspace industry.">
-<title>Digital Maturity Index | Flexible Workspace Industry</title>
-<style>
-:root{--navy:#0c2738;--ink:#101d39;--muted:#49617b;--teal:#007d80;--yellow:#ffc600;--line:#dbe5ec;--soft:#f2f7f9}*{box-sizing:border-box}body{margin:0;background:#fbfcfd;color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}button,input{font:inherit}button,summary,label{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}[hidden]{display:none!important}:focus-visible{outline:3px solid #159da6;outline-offset:4px}header{background:var(--navy);border-left:12px solid var(--yellow);color:white}.header-inner{max-width:1200px;margin:auto;display:flex;align-items:center;gap:26px;min-height:102px;padding:18px 28px}.brand{font-size:28px;letter-spacing:-1px;font-weight:800}.title-block{border-left:1px solid #446071;padding-left:26px}.app-title{font-size:23px;font-weight:700}.subtitle{color:#c1d9e7;font-size:15px}.state-nav{display:flex;gap:26px;margin-left:auto;font-size:12px;text-transform:uppercase;letter-spacing:.6px}.state-nav span{padding:9px 0;border-bottom:3px solid transparent;color:#bcd0df}.state-nav .active{color:white;border-color:var(--yellow)}.mark{display:grid;grid-template-columns:repeat(3,12px);gap:4px;margin-left:14px}.mark i{height:12px;border-radius:3px;background:#365c72}.mark i:nth-child(3n){background:#658599}.mark i:nth-child(6){background:var(--yellow)}main{max-width:1200px;margin:auto;padding:34px 28px 0}h1{font-size:32px;line-height:1.2;letter-spacing:-.8px;margin:4px 0 8px}h2,h3,p{margin-top:0}.lead{color:var(--muted);font-size:16px;margin-bottom:22px}.eyebrow{color:var(--teal);font-weight:700;font-size:13px}.progress-row{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px;margin-bottom:8px;color:var(--muted)}progress{display:block;width:100%;height:7px;border:0;border-radius:10px;background:#e7eef2;accent-color:var(--teal)}progress::-webkit-progress-bar{background:#e7eef2;border-radius:10px}progress::-webkit-progress-value{background:var(--teal);border-radius:10px}progress::-moz-progress-bar{background:var(--teal);border-radius:10px}.steps{display:flex;list-style:none;padding:0;margin:25px 0 28px;gap:16px}.steps li{flex:1;position:relative}.steps li:not(:last-child):after{content:"";position:absolute;top:19px;left:52px;right:0;height:1px;background:#c4d5e1}.step-button{border:0;background:none;text-align:left;padding:0;color:var(--muted);width:100%;font-size:12px}.step-number{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#e4ebf0;color:var(--ink);font-weight:700;font-size:18px;margin-bottom:8px}.step-button[aria-current="step"]{color:var(--ink);font-weight:700}.step-button[aria-current="step"] .step-number,.step-button.complete .step-number{background:var(--teal);color:white}.step-name{display:block;max-width:160px}.dimension{border:1px solid var(--line);border-radius:8px;margin-bottom:10px;background:white;overflow:hidden}.dimension>summary{padding:16px 20px;display:flex;align-items:center;gap:14px;font-weight:700;cursor:pointer;list-style:none}.dimension>summary::-webkit-details-marker{display:none}.dimension>summary:after{content:"⌄";font-size:20px;font-weight:400}.dimension[open]>summary:after{transform:rotate(180deg)}.dimension[open]{background:linear-gradient(120deg,#f6f9fb,#fff)}.dimension[open]>summary{border-bottom:1px solid var(--line)}.dimension-index{border-right:1px solid var(--line);padding-right:14px}.dimension-count{font-size:12px;color:var(--muted);font-weight:400;margin-left:auto;white-space:nowrap}.dimension-body{padding:6px 20px 20px}fieldset{border:0;border-bottom:1px solid var(--line);margin:0;padding:20px 0}fieldset:last-of-type{border-bottom:0}legend{float:left;width:100%;font-weight:700;font-size:15px;padding:0;margin-bottom:12px}legend+div{clear:both}.q-number{color:var(--teal);font-size:12px;display:inline-block;width:30px}.answers{display:grid;gap:5px}.answer{display:flex;align-items:flex-start;gap:11px;padding:9px 12px;border:1px solid transparent;border-radius:6px;color:#354e6b;font-size:14px;cursor:pointer}.answer:hover{background:#edf5f6}.answer:has(input:checked){background:#e5f3f2;border-color:#a0d3d1;color:#075f62}.answer input{accent-color:var(--teal);width:18px;height:18px;margin:1px 0 0;flex-shrink:0}.answer-value{font-weight:700}.dimension-controls{display:flex;justify-content:space-between;gap:12px;margin-top:12px}button.primary,button.secondary{border-radius:6px;padding:12px 19px;font-weight:700;font-size:14px}.primary{background:var(--teal);border:1px solid var(--teal);color:white}.primary:hover:not(:disabled){background:#006b6e}.secondary{background:#edf2f5;border:1px solid var(--line);color:#38516b}.submit-panel{margin-top:24px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--line);border-radius:8px;background:white}.submit-panel p{margin:3px 0 0;font-size:13px;color:var(--muted)}.placeholder-note{font-size:12px;color:var(--muted);margin:20px 0}.results-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.results-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:18px;margin-top:24px}.results-column{display:flex;flex-direction:column;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:8px;padding:22px;box-shadow:0 2px 5px #15344e03}.chart-panel h2{font-size:21px;margin-bottom:0}.chart-panel p{color:var(--muted);margin-bottom:12px}.chart-container{height:370px;position:relative}.chart-key{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--muted);margin-top:10px}.chart-key:before{content:"";height:8px;width:20px;border-radius:3px;background:var(--teal)}.score-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.score-card{padding:20px 18px}.score-card:last-child{grid-column:1/-1}.score{font-size:34px;line-height:1.1;font-weight:700;color:var(--teal);letter-spacing:-1px}.score small{font-size:20px;color:var(--ink);letter-spacing:0}.score-bar{height:8px;background:#edf2f5;border-radius:5px;margin:12px 0}.score-bar span{display:block;height:100%;border-radius:5px;background:var(--teal)}.score-card.low .score{color:#c12930}.score-card.low .score-bar span{background:#c12930}.score-card.mid .score-bar span{background:#f5bc00}.score-card h3{font-size:14px;line-height:1.4;margin:0 0 10px}.stage{font-size:13px;font-weight:700;margin-bottom:5px}.stage-description{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:0}.profile-panel{background:var(--soft);border-left:6px solid var(--yellow);padding:25px;flex:1}.profile-label{font-size:14px;font-weight:700;margin-bottom:4px}.profile-panel h2{font-size:27px;line-height:1.2;margin-bottom:12px}.profile-panel p{font-size:14px;color:var(--muted);line-height:1.65}.next-action{border-top:1px solid #ccdde6;padding-top:18px;margin-top:20px}.next-action h3{font-size:15px;margin-bottom:6px}.lowest-panel{background:var(--soft);border:0}.lowest-panel h2{font-size:15px;margin-bottom:16px}.lowest-panel ol{list-style:none;margin:0;padding:0;counter-reset:priority}.lowest-panel li{counter-increment:priority;display:flex;gap:12px;align-items:center;margin-top:12px;font-size:14px}.lowest-panel li:before{content:counter(priority);background:#c12930;color:white;width:27px;height:27px;flex-shrink:0;display:grid;place-items:center;border-radius:50%}.tie-note{font-size:11px;color:var(--muted);margin:14px 0 0}footer{border-top:1px solid var(--line);max-width:1144px;margin:30px auto 0;padding:22px 0 28px;display:flex;align-items:center;gap:18px;color:var(--muted);font-size:11px}footer strong{font-size:15px;color:var(--ink);letter-spacing:-.7px}footer span:last-child{margin-left:auto}@media(min-width:1000px){.dimension-body{padding-left:25px;padding-right:25px}.answers{grid-template-columns:1fr}.answer{max-width:100%}}@media(max-width:760px){.header-inner{padding:18px;gap:16px;flex-wrap:wrap}.brand{font-size:23px}.title-block{padding-left:16px}.app-title{font-size:19px}.subtitle{font-size:12px}.state-nav{margin-left:0;width:100%;padding-left:0;gap:24px}.mark{display:none}main{padding:25px 18px 0}h1{font-size:27px}.results-layout{grid-template-columns:1fr}.results-heading{flex-direction:column}.chart-container{height:350px}.steps{gap:8px}.step-name{font-size:10px}.steps li:not(:last-child):after{left:43px}.dimension>summary{padding:14px 12px;gap:9px;font-size:13px}.dimension-index{padding-right:9px}.dimension-count{font-size:10px}.dimension-body{padding:4px 12px 16px}.submit-panel{align-items:stretch;flex-direction:column}.dimension-controls button{font-size:12px;padding:11px}.score-card{padding:16px}.score-grid{gap:10px}footer{margin:28px 18px 0;flex-wrap:wrap;gap:8px 15px}footer span:last-child{margin-left:0;width:100%}}@media(prefers-reduced-motion:no-preference){button,.answer{transition:background .15s ease}}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" defer></script>
-</head>
-<body>
-<header><div class="header-inner"><div class="brand">WEWORK</div><div class="title-block"><div class="app-title">Digital Maturity Index</div><div class="subtitle">Flexible Workspace Industry</div></div><div class="state-nav" aria-label="Assessment status"><span id="assessment-tab" class="active">Assessment</span><span id="results-tab">Results</span></div><div class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></header>
-<main>
-<section id="assessment-view" aria-labelledby="assessment-heading">
-<div class="eyebrow" id="step-label">Step 1 of 5</div><h1 id="assessment-heading" tabindex="-1">Workspace &amp; Portfolio Data</h1><p class="lead">Answer the following questions based on your organization’s current state.</p>
-<div class="progress-row"><span>Assessment progress</span><span id="progress-text" role="status" aria-live="polite">0 of 20 answered</span></div><progress id="overall-progress" max="20" value="0" aria-label="Questions answered"></progress>
-<ol class="steps" id="steps"></ol><form id="assessment-form"><div id="dimensions"></div><div class="submit-panel"><div><strong>Ready to see your digital maturity?</strong><p id="submit-help">Answer all 20 questions to unlock your results.</p></div><button type="submit" class="primary" id="submit-button" disabled aria-describedby="submit-help">View My Results →</button></div></form>
-<p class="placeholder-note">Working framework · Placeholder diagnostic questions and maturity definitions. Choose the highest level your organization consistently meets. Responses stay in memory for this session only.</p>
-</section>
-<section id="results-view" hidden aria-labelledby="results-heading"><div class="results-heading"><div><h1 id="results-heading" tabindex="-1">Your Digital Maturity Results</h1><p class="lead">Your organization’s maturity across the five capability dimensions.</p></div><button type="button" id="retake-button" class="secondary">↻ Retake Assessment</button></div>
-<div class="results-layout"><div class="results-column"><div class="panel chart-panel"><h2>Digital Maturity Index</h2><p>Flexible Workspace Industry</p><div class="chart-container"><canvas id="radar-chart" role="img" aria-label="Radar chart of your five dimension scores; equivalent scores appear in the score cards."></canvas><p id="chart-unavailable" hidden>Connect to the internet and reopen this file to load the radar chart. Your calculated scores are shown in the cards.</p></div><div class="chart-key">Your dimension scores · 1–5</div></div><div class="panel profile-panel" id="profile"></div></div><div class="results-column"><div id="score-cards" class="score-grid"></div><div id="lowest" class="panel lowest-panel"></div></div></div>
-<p class="placeholder-note">Working framework · Scores reflect your self-assessment. Stage definitions and profile rules are placeholders, not industry benchmarks.</p></section>
-</main><footer><strong>WEWORK</strong><span>Digital Transformation&nbsp; | &nbsp;AI Strategy &amp; Competitive Advantage</span><span>Flexible Spaces. Smarter Decisions.</span></footer>
-<script>
-'use strict';
-// CONTENT: Replace these placeholder questions and their five answer labels here.
-// Each question retains a stable ID; values are explicit integers from 1 through 5.
-const question = (id, text, labels) => ({id, text, answers: labels.map((label, index) => ({value: index + 1, label}))});
-const dimensions = [
- {id:'data',name:'Workspace & Portfolio Data',questions:[
-  question('data1','How is workspace utilization data collected across locations?',['Primarily manual or unavailable','Collected digitally at selected locations','Collected consistently across most locations','Integrated with portfolio reporting and analytics','Updated in real time and routinely used in operating decisions']),
-  question('data2','How are financial and lease records connected to workspace operating data?',['Maintained in separate files with no shared identifiers','Combined manually for occasional reports','Linked using shared identifiers in scheduled reports','Integrated automatically in a governed portfolio data platform','Integrated data is continuously validated and used in scenario planning']),
-  question('data3','How is occupancy and demand data used for forecasting?',['No recurring data-based forecasts','Local teams prepare occasional spreadsheet forecasts','Most locations use a common monthly forecasting process','Portfolio forecasts combine occupancy, pipeline, and pricing data','Forecasts refresh automatically and accuracy is tracked to improve decisions']),
-  question('data4','How do teams access and govern portfolio data?',['Records are held by individuals without common definitions','Some teams share files with locally defined metrics','Common definitions and role-based access cover most locations','Named owners maintain a shared catalog and automated quality checks','Quality, access, and usage are continuously monitored across the portfolio'])]},
- {id:'member',name:'Member Digital Experience',questions:[
-  question('member1','How do members book desks, rooms, and shared amenities?',['Staff handle bookings manually','Digital booking is available at selected locations','Members self-book through a common platform at most locations','Booking connects to access, billing, and live availability','Integrated booking adapts to member preferences and is improved using usage data']),
-  question('member2','How is the member onboarding process delivered?',['Paper forms and manual staff coordination','Some forms are digital but re-entry is required','A standard digital onboarding workflow serves most locations','Contracts, payments, access, and welcome steps are connected','Onboarding completion is monitored automatically and friction is routinely resolved']),
-  question('member3','How are member service requests tracked and resolved?',['Requests arrive informally with no shared record','Some teams use a digital ticket list','Most locations use a shared ticket system with service targets','Tickets route automatically and members can track status','Resolution trends and feedback drive documented service improvements']),
-  question('member4','How is member feedback connected to service improvements?',['Feedback is collected informally or not recorded','Individual locations run occasional digital surveys','A common feedback process tracks issues across most locations','Feedback links to member records and assigned improvement actions','Teams measure the impact of changes and regularly refine the member journey'])]},
- {id:'operations',name:'Workspace Operations Automation',questions:[
-  question('operations1','How are recurring invoices and membership changes processed?',['Invoices and changes are entered manually','Invoice templates are digital but require manual reconciliation','Recurring billing is automated for most memberships','Billing synchronizes with contracts, bookings, and finance systems','Exceptions are automatically flagged and billing performance is continuously reviewed']),
-  question('operations2','How are maintenance tasks scheduled and tracked?',['Staff rely on calls and paper records','Selected locations use digital task lists','A shared system schedules preventive maintenance at most sites','Equipment alerts create and route work orders automatically','Condition data optimizes maintenance schedules and measured asset performance']),
-  question('operations3','How is building access provisioned and removed?',['Keys or access permissions are managed manually','Digital access exists at some sites with manual updates','Standard digital access processes cover most locations','Access updates automatically from active membership and booking records','Exceptions are monitored and access controls are regularly audited and improved']),
-  question('operations4','How are location operating workflows standardized?',['Each site manages tasks independently','Some sites document tasks in digital checklists','Most locations use shared workflows and task ownership','Connected workflows automate handoffs and escalate exceptions','Workflow performance is measured and improvements are deployed across the portfolio'])]},
- {id:'ai',name:'AI-Enabled Portfolio Intelligence',questions:[
-  question('ai1','How are predictive models used in occupancy planning?',['No predictive models are used','Teams run isolated forecasting experiments','A documented model supports recurring planning at selected sites','Validated models inform planning across most of the portfolio','Model accuracy and drift are monitored with regular retraining and human review']),
-  question('ai2','How is advanced analytics used in workspace pricing?',['Prices are set without structured analysis','Teams run occasional pricing analyses','Repeatable analytics inform scheduled pricing reviews','Models recommend prices using demand and capacity with approval controls','Pricing models are monitored for outcomes and constraints and systematically refined']),
-  question('ai3','How are AI-assisted tools used in member support?',['No AI-assisted support tools are used','Individuals experiment without a shared workflow','An approved pilot assists staff with documented human review','AI assistance is integrated into support with escalation and quality controls','Quality, member outcomes, and risks are continuously monitored and improved']),
-  question('ai4','How are analytics and AI initiatives evaluated?',['No formal evaluation process exists','Pilots report informal observations','Initiatives have owners, baselines, and documented success measures','Performance and risk reviews determine portfolio-wide rollout','Ongoing outcome monitoring drives investment, model changes, and retirement decisions'])]},
- {id:'operating',name:'Digital Operating Model',questions:[
-  question('operating1','How are digital investment decisions owned and governed?',['Decisions are ad hoc with no named owner','Individual departments own separate digital initiatives','A cross-functional group reviews a shared roadmap','Clear decision rights and funding link the roadmap to portfolio priorities','Governance routinely adjusts investment using measured business outcomes']),
-  question('operating2','How are digital skills developed across location teams?',['No structured digital training is provided','Training is offered when individual needs arise','Role-based training is available to most teams','Skills assessments and adoption measures guide ongoing development','Capability gaps are continuously assessed and learning outcomes inform workforce planning']),
-  question('operating3','How are new digital processes introduced across locations?',['Changes are announced without a rollout process','Teams use informal pilots and local instructions','A repeatable rollout plan assigns owners and training','Change champions track adoption and resolve barriers across sites','Adoption and outcome evidence continuously improve the rollout approach']),
-  question('operating4','How is accountability for digital outcomes maintained?',['No shared digital outcome measures exist','Departments track their own activity measures','Named owners report common outcome measures periodically','Leaders review outcomes against targets and assign corrective actions','Outcome reviews continually reshape priorities, incentives, and operating practices'])]}
-];
-// Replace with the Framework Designer’s final Stage 1–5 names and descriptions.
-// Apply thresholds to full-precision averages, not the rounded display value.
-const stageDefinitions = [
- {min:1,number:1,name:'Foundational',description:'Work relies on manual tasks and isolated practices; shared digital foundations are limited.'},
- {min:2,number:2,name:'Emerging',description:'Digital tools and local pilots are in place, but practices are not yet consistent across locations.'},
- {min:3,number:3,name:'Developing',description:'Common digital practices are established, with opportunities to connect and scale them.'},
- {min:4,number:4,name:'Integrated',description:'Connected systems and shared practices inform decisions across the portfolio.'},
- {min:4.5,number:5,name:'Adaptive',description:'Measured outcomes and continuous improvement guide digital practices across the portfolio.'}
-];
-// Replace these five placeholder profiles, interpretations, and recommended actions.
-const maturityProfiles = {
- foundations:{name:'Building the Foundations',interpretation:'Digital practices are at an early stage across all five dimensions. Establishing consistent records, ownership, and repeatable workflows can create a base for future investment.',action:'Assign an owner to standardize one core data and operating workflow across a small group of locations.'},
- connected:{name:'Connected & Adaptive',interpretation:'Digital capabilities are integrated across all five dimensions. Shared data, member services, automation, intelligence, and governance provide a strong base for continuous improvement.',action:'Select one portfolio outcome and run a measured improvement cycle across the connected operating model.'},
- dataGap:{name:'Data Foundation Gap',interpretation:'Workspace and portfolio data trails the other capabilities. Inconsistent or disconnected records can constrain otherwise established digital services and decision processes.',action:'Define shared portfolio metrics, assign data owners, and reconcile one priority dataset across locations.'},
- experienceGap:{name:'Digital Experience, Untapped Intelligence',interpretation:'Member-facing digital capabilities are established while AI-enabled portfolio intelligence remains early. Existing member and operating signals offer a starting point for a governed analytics pilot.',action:'Pilot one occupancy forecast with a named owner, validated data, human review, and a measured accuracy target.'},
- execution:{name:'Execution Gap',interpretation:'Digital capabilities are ahead of the operating model that supports them. Gaps in ownership, skills, and change practices can limit consistent adoption across locations.',action:'Establish cross-functional governance with clear decision rights, accountable owners, and a shared change management plan.'}
-};
-const mean = values => values.reduce((sum, value) => sum + value, 0) / values.length;
-// First matching rule wins. Uniform = every score in the band; significant gap = 1 point.
-// Keep precedence and thresholds here for replacement by the final Interpretation Guide.
-const profileMatchingRules = [
- {profile:'foundations',matches:s=>s.every(v=>v<3)},
- {profile:'connected',matches:s=>s.every(v=>v>=4)},
- {profile:'dataGap',matches:s=>mean(s.slice(1))-s[0]>=1},
- {profile:'experienceGap',matches:s=>s[1]>=4 && s[3]<3},
- {profile:'execution',matches:s=>mean(s.slice(0,4))-s[4]>=1}
-];
-function scoreAssessment(responses){
- if(!dimensions.every(d=>d.questions.every(q=>Number.isInteger(responses[q.id]) && q.answers.some(a=>a.value===responses[q.id])))) throw new Error('All 20 questions must have one valid response.');
- return dimensions.map(d=>mean(d.questions.map(q=>responses[q.id])));
-}
-function stageFor(score){return [...stageDefinitions].reverse().find(stage=>score>=stage.min);}
-// Stable tie break: original dimension order, so exactly two are always selected.
-function lowestDimensions(scores){return scores.map((score,index)=>({score,index,name:dimensions[index].name})).sort((a,b)=>a.score-b.score || a.index-b.index).slice(0,2);}
-function selectProfile(scores){
- const rule=profileMatchingRules.find(rule=>rule.matches(scores));
- if(rule) return maturityProfiles[rule.profile];
- const lowest=lowestDimensions(scores);
- return {name:'Building a Balanced Portfolio',interpretation:`Your capability mix does not match a specialized profile. ${lowest[0].name} and ${lowest[1].name} are the two lowest-scoring dimensions and provide a consistent starting point for prioritization.`,action:`Set one measurable improvement target for ${lowest[0].name}, with a named owner and a review date, then review dependencies with ${lowest[1].name}.`};
-}
-const totalQuestions=dimensions.reduce((sum,d)=>sum+d.questions.length,0);
-let responses={}, activeDimension=0, radarChart=null;
-const $=id=>document.getElementById(id);
-const escapeHTML=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-function renderAssessment(){
- $('steps').innerHTML=dimensions.map((d,i)=>`<li><button type="button" class="step-button" data-step="${i}" aria-controls="dimension-${i}" ${i===0?'aria-current="step"':''}><span class="step-number">${i+1}</span><span class="step-name">${escapeHTML(d.name)}</span></button></li>`).join('');
- $('dimensions').innerHTML=dimensions.map((d,i)=>`<details class="dimension" id="dimension-${i}" ${i===0?'open':''}><summary><span class="dimension-index">${i+1}</span><span>${escapeHTML(d.name)}</span><span class="dimension-count" id="count-${i}">0 of 4 answered</span></summary><div class="dimension-body">${d.questions.map((q,qi)=>`<fieldset><legend><span class="q-number">Q${qi+1}</span>${escapeHTML(q.text)}</legend><div class="answers">${q.answers.map(a=>`<label class="answer"><input type="radio" required name="${q.id}" value="${a.value}"><span><span class="answer-value">${a.value}</span> — ${escapeHTML(a.label)}</span></label>`).join('')}</div></fieldset>`).join('')}<div class="dimension-controls"><button type="button" class="secondary" data-step="${i-1}" ${i===0?'disabled':''}>← Previous</button>${i<dimensions.length-1?`<button type="button" class="primary" data-step="${i+1}">Next: ${escapeHTML(dimensions[i+1].name)} →</button>`:'<button type="button" class="secondary" id="review-progress">Review completion ↓</button>'}</div></div></details>`).join('');
- document.querySelectorAll('.dimension').forEach((detail,i)=>detail.addEventListener('toggle',()=>{if(detail.open){activeDimension=i;document.querySelectorAll('.dimension').forEach(other=>{if(other!==detail) other.open=false;});updateActiveDimension();}}));
- updateProgress();updateActiveDimension();
-}
-function updateActiveDimension(){
- $('assessment-heading').textContent=dimensions[activeDimension].name;
- $('step-label').textContent=`Step ${activeDimension+1} of ${dimensions.length}`;
- document.querySelectorAll('.step-button').forEach((button,i)=>{if(i===activeDimension) button.setAttribute('aria-current','step'); else button.removeAttribute('aria-current');});
-}
-function openDimension(index){
- if(index<0 || index>=dimensions.length) return;
- activeDimension=index;
- document.querySelectorAll('.dimension').forEach((detail,i)=>{detail.open=i===index;});
- updateActiveDimension();
- $('assessment-heading').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});
-}
-function updateProgress(){
- const count=Object.keys(responses).length;
- $('overall-progress').value=count;
- $('progress-text').textContent=`${count} of ${totalQuestions} answered`;
- $('submit-button').disabled=count!==totalQuestions;
- $('submit-help').textContent=count===totalQuestions?'All questions answered. Your results are ready to calculate.':`Answer all ${totalQuestions} questions to unlock your results. ${totalQuestions-count} remaining.`;
- dimensions.forEach((d,i)=>{const answered=d.questions.filter(q=>responses[q.id]!==undefined).length;$('count-'+i).textContent=`${answered} of ${d.questions.length} answered`;document.querySelectorAll('.step-button')[i].classList.toggle('complete',answered===d.questions.length);});
-}
-function renderResults(scores){
- const profile=selectProfile(scores),lowest=lowestDimensions(scores);
- $('score-cards').innerHTML=dimensions.map((d,i)=>{const stage=stageFor(scores[i]);return `<article class="panel score-card ${scores[i]<2.5?'low':scores[i]<4?'mid':''}"><div class="score">${scores[i].toFixed(1)} <small>/ 5</small></div><div class="score-bar" aria-hidden="true"><span style="width:${scores[i]/5*100}%"></span></div><h3>${escapeHTML(d.name)}</h3><p class="stage">Stage ${stage.number} — ${escapeHTML(stage.name)}</p><p class="stage-description">${escapeHTML(stage.description)}</p></article>`;}).join('');
- $('profile').innerHTML=`<div class="profile-label">Your Maturity Profile</div><h2>${escapeHTML(profile.name)}</h2><p>${escapeHTML(profile.interpretation)}</p><div class="next-action"><h3>Recommended Next Action</h3><p>${escapeHTML(profile.action)}</p></div>`;
- $('lowest').innerHTML=`<h2>Lowest-Scoring Dimensions</h2><ol>${lowest.map(d=>`<li>${escapeHTML(d.name)} (${d.score.toFixed(1)})</li>`).join('')}</ol><p class="tie-note">Ranked using unrounded scores. Ties follow the assessment’s dimension order.</p>`;
- $('assessment-view').hidden=true;$('results-view').hidden=false;
- $('assessment-tab').classList.remove('active');$('results-tab').classList.add('active');
- if(radarChart){radarChart.destroy();radarChart=null;}
- const chartReady=typeof Chart!=='undefined';
- $('radar-chart').hidden=!chartReady;$('chart-unavailable').hidden=chartReady;
- if(chartReady) radarChart=new Chart($('radar-chart'),{type:'radar',data:{labels:dimensions.map(d=>d.name),datasets:[{label:'Your maturity',data:scores,borderColor:'#007d80',backgroundColor:'rgba(0,125,128,.20)',pointBackgroundColor:'#007d80',pointRadius:4,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,animation:false,layout:{padding:8},plugins:{legend:{display:false},tooltip:{callbacks:{label:context=>`Score: ${context.raw.toFixed(1)} / 5`}}},scales:{r:{min:1,max:5,ticks:{stepSize:1,color:'#49617b',backdropColor:'transparent',font:{size:11}},grid:{color:'#d5e0e9'},angleLines:{color:'#d5e0e9'},pointLabels:{color:'#152d4e',font:{size:11},callback:label=>{const lines=[];let line='';label.split(' ').forEach(word=>{if((line+' '+word).trim().length>19){lines.push(line);line=word;}else line=(line+' '+word).trim();});if(line)lines.push(line);return lines;}}}}}});
- $('results-heading').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});
-}
-$('assessment-form').addEventListener('change',event=>{if(event.target.matches('input[type="radio"]')){responses[event.target.name]=Number(event.target.value);updateProgress();}});
-$('assessment-view').addEventListener('click',event=>{const button=event.target.closest('button[data-step]');if(button&&!button.disabled)openDimension(Number(button.dataset.step));if(event.target.closest('#review-progress')){$('submit-button').scrollIntoView({block:'center'});}});
-$('assessment-form').addEventListener('submit',event=>{event.preventDefault();if(Object.keys(responses).length!==totalQuestions)return;renderResults(scoreAssessment(responses));});
-$('retake-button').addEventListener('click',()=>{if(radarChart){radarChart.destroy();radarChart=null;}responses={};activeDimension=0;$('assessment-form').reset();$('results-view').hidden=true;$('assessment-view').hidden=false;$('score-cards').replaceChildren();$('profile').replaceChildren();$('lowest').replaceChildren();$('assessment-tab').classList.add('active');$('results-tab').classList.remove('active');renderAssessment();openDimension(0);});
-renderAssessment();
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A Digital Maturity Index assessment for the flexible workspace industry."
+    />
+    <title>Digital Maturity Index | Flexible Workspace Industry</title>
+    <style>
+      :root {
+        --navy: #0c2738;
+        --ink: #101d39;
+        --muted: #49617b;
+        --teal: #007d80;
+        --yellow: #ffc600;
+        --line: #dbe5ec;
+        --soft: #f2f7f9;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #fbfcfd;
+        color: var(--ink);
+        font:
+          15px/1.5 Arial,
+          Helvetica,
+          sans-serif;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+      button,
+      summary,
+      label {
+        touch-action: manipulation;
+      }
+      button {
+        cursor: pointer;
+      }
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      :focus-visible {
+        outline: 3px solid #159da6;
+        outline-offset: 4px;
+      }
+      header {
+        background: var(--navy);
+        border-left: 12px solid var(--yellow);
+        color: white;
+      }
+      .header-inner {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        min-height: 102px;
+        padding: 18px 28px;
+      }
+      .brand {
+        font-size: 28px;
+        letter-spacing: -1px;
+        font-weight: 800;
+      }
+      .title-block {
+        border-left: 1px solid #446071;
+        padding-left: 26px;
+      }
+      .app-title {
+        font-size: 23px;
+        font-weight: 700;
+      }
+      .subtitle {
+        color: #c1d9e7;
+        font-size: 15px;
+      }
+      .state-nav {
+        display: flex;
+        gap: 26px;
+        margin-left: auto;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+      .state-nav span {
+        padding: 9px 0;
+        border-bottom: 3px solid transparent;
+        color: #bcd0df;
+      }
+      .state-nav .active {
+        color: white;
+        border-color: var(--yellow);
+      }
+      .mark {
+        display: grid;
+        grid-template-columns: repeat(3, 12px);
+        gap: 4px;
+        margin-left: 14px;
+      }
+      .mark i {
+        height: 12px;
+        border-radius: 3px;
+        background: #365c72;
+      }
+      .mark i:nth-child(3n) {
+        background: #658599;
+      }
+      .mark i:nth-child(6) {
+        background: var(--yellow);
+      }
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 34px 28px 0;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin: 4px 0 8px;
+      }
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+      .lead {
+        color: var(--muted);
+        font-size: 16px;
+        margin-bottom: 22px;
+      }
+      .eyebrow {
+        color: var(--teal);
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .progress-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+        font-size: 13px;
+        margin-bottom: 8px;
+        color: var(--muted);
+      }
+      progress {
+        display: block;
+        width: 100%;
+        height: 7px;
+        border: 0;
+        border-radius: 10px;
+        background: #e7eef2;
+        accent-color: var(--teal);
+      }
+      progress::-webkit-progress-bar {
+        background: #e7eef2;
+        border-radius: 10px;
+      }
+      progress::-webkit-progress-value {
+        background: var(--teal);
+        border-radius: 10px;
+      }
+      progress::-moz-progress-bar {
+        background: var(--teal);
+        border-radius: 10px;
+      }
+      .steps {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 25px 0 28px;
+        gap: 16px;
+      }
+      .steps li {
+        flex: 1;
+        position: relative;
+      }
+      .steps li:not(:last-child):after {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: 52px;
+        right: 0;
+        height: 1px;
+        background: #c4d5e1;
+      }
+      .step-button {
+        border: 0;
+        background: none;
+        text-align: left;
+        padding: 0;
+        color: var(--muted);
+        width: 100%;
+        font-size: 12px;
+      }
+      .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #e4ebf0;
+        color: var(--ink);
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      .step-button[aria-current="step"] {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .step-button[aria-current="step"] .step-number,
+      .step-button.complete .step-number {
+        background: var(--teal);
+        color: white;
+      }
+      .step-name {
+        display: block;
+        max-width: 160px;
+      }
+      .dimension {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-bottom: 10px;
+        background: white;
+        overflow: hidden;
+      }
+      .dimension > summary {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        list-style: none;
+      }
+      .dimension > summary::-webkit-details-marker {
+        display: none;
+      }
+      .dimension > summary:after {
+        content: "⌄";
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .dimension[open] > summary:after {
+        transform: rotate(180deg);
+      }
+      .dimension[open] {
+        background: linear-gradient(120deg, #f6f9fb, #fff);
+      }
+      .dimension[open] > summary {
+        border-bottom: 1px solid var(--line);
+      }
+      .dimension-index {
+        border-right: 1px solid var(--line);
+        padding-right: 14px;
+      }
+      .dimension-count {
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 400;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+      .dimension-body {
+        padding: 6px 20px 20px;
+      }
+      fieldset {
+        border: 0;
+        border-bottom: 1px solid var(--line);
+        margin: 0;
+        padding: 20px 0;
+      }
+      fieldset:last-of-type {
+        border-bottom: 0;
+      }
+      legend {
+        float: left;
+        width: 100%;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 0;
+        margin-bottom: 12px;
+      }
+      legend + div {
+        clear: both;
+      }
+      .q-number {
+        color: var(--teal);
+        font-size: 12px;
+        display: inline-block;
+        width: 30px;
+      }
+      .answers {
+        display: grid;
+        gap: 5px;
+      }
+      .answer {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        padding: 9px 12px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        color: #354e6b;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .answer:hover {
+        background: #edf5f6;
+      }
+      .answer:has(input:checked) {
+        background: #e5f3f2;
+        border-color: #a0d3d1;
+        color: #075f62;
+      }
+      .answer input {
+        accent-color: var(--teal);
+        width: 18px;
+        height: 18px;
+        margin: 1px 0 0;
+        flex-shrink: 0;
+      }
+      .answer-value {
+        font-weight: 700;
+      }
+      .dimension-controls {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      button.primary,
+      button.secondary {
+        border-radius: 6px;
+        padding: 12px 19px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .primary {
+        background: var(--teal);
+        border: 1px solid var(--teal);
+        color: white;
+      }
+      .primary:hover:not(:disabled) {
+        background: #006b6e;
+      }
+      .secondary {
+        background: #edf2f5;
+        border: 1px solid var(--line);
+        color: #38516b;
+      }
+      .submit-panel {
+        margin-top: 24px;
+        padding: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+      }
+      .submit-panel p {
+        margin: 3px 0 0;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .placeholder-note {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 20px 0;
+      }
+      .results-heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .results-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 18px;
+        margin-top: 24px;
+      }
+      .results-column {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .panel {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 22px;
+        box-shadow: 0 2px 5px #15344e03;
+      }
+      .chart-panel h2 {
+        font-size: 21px;
+        margin-bottom: 0;
+      }
+      .chart-panel p {
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+      .chart-container {
+        height: 370px;
+        position: relative;
+      }
+      .chart-key {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 10px;
+      }
+      .chart-key:before {
+        content: "";
+        height: 8px;
+        width: 20px;
+        border-radius: 3px;
+        background: var(--teal);
+      }
+      .score-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .score-card {
+        padding: 20px 18px;
+      }
+      .score-card:last-child {
+        grid-column: 1/-1;
+      }
+      .score {
+        font-size: 34px;
+        line-height: 1.1;
+        font-weight: 700;
+        color: var(--teal);
+        letter-spacing: -1px;
+      }
+      .score small {
+        font-size: 20px;
+        color: var(--ink);
+        letter-spacing: 0;
+      }
+      .score-bar {
+        height: 8px;
+        background: #edf2f5;
+        border-radius: 5px;
+        margin: 12px 0;
+      }
+      .score-bar span {
+        display: block;
+        height: 100%;
+        border-radius: 5px;
+        background: var(--teal);
+      }
+      .score-card.low .score {
+        color: #c12930;
+      }
+      .score-card.low .score-bar span {
+        background: #c12930;
+      }
+      .score-card.mid .score-bar span {
+        background: #f5bc00;
+      }
+      .score-card h3 {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0 0 10px;
+      }
+      .stage {
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .stage-description {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.55;
+        margin-bottom: 0;
+      }
+      .profile-panel {
+        background: var(--soft);
+        border-left: 6px solid var(--yellow);
+        padding: 25px;
+        flex: 1;
+      }
+      .profile-label {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .profile-panel h2 {
+        font-size: 27px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .profile-panel p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .next-action {
+        border-top: 1px solid #ccdde6;
+        padding-top: 18px;
+        margin-top: 20px;
+      }
+      .next-action h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+      .lowest-panel {
+        background: var(--soft);
+        border: 0;
+      }
+      .lowest-panel h2 {
+        font-size: 15px;
+        margin-bottom: 16px;
+      }
+      .lowest-panel ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: priority;
+      }
+      .lowest-panel li {
+        counter-increment: priority;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 12px;
+        font-size: 14px;
+      }
+      .lowest-panel li:before {
+        content: counter(priority);
+        background: #c12930;
+        color: white;
+        width: 27px;
+        height: 27px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+      }
+      .tie-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin: 14px 0 0;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        max-width: 1144px;
+        margin: 30px auto 0;
+        padding: 22px 0 28px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+      footer strong {
+        font-size: 15px;
+        color: var(--ink);
+        letter-spacing: -0.7px;
+      }
+      footer span:last-child {
+        margin-left: auto;
+      }
+      @media (min-width: 1000px) {
+        .dimension-body {
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+        .answers {
+          grid-template-columns: 1fr;
+        }
+        .answer {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 760px) {
+        .header-inner {
+          padding: 18px;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+        .brand {
+          font-size: 23px;
+        }
+        .title-block {
+          padding-left: 16px;
+        }
+        .app-title {
+          font-size: 19px;
+        }
+        .subtitle {
+          font-size: 12px;
+        }
+        .state-nav {
+          margin-left: 0;
+          width: 100%;
+          padding-left: 0;
+          gap: 24px;
+        }
+        .mark {
+          display: none;
+        }
+        main {
+          padding: 25px 18px 0;
+        }
+        h1 {
+          font-size: 27px;
+        }
+        .results-layout {
+          grid-template-columns: 1fr;
+        }
+        .results-heading {
+          flex-direction: column;
+        }
+        .chart-container {
+          height: 350px;
+        }
+        .steps {
+          gap: 8px;
+        }
+        .step-name {
+          font-size: 10px;
+        }
+        .steps li:not(:last-child):after {
+          left: 43px;
+        }
+        .dimension > summary {
+          padding: 14px 12px;
+          gap: 9px;
+          font-size: 13px;
+        }
+        .dimension-index {
+          padding-right: 9px;
+        }
+        .dimension-count {
+          font-size: 10px;
+        }
+        .dimension-body {
+          padding: 4px 12px 16px;
+        }
+        .submit-panel {
+          align-items: stretch;
+          flex-direction: column;
+        }
+        .dimension-controls button {
+          font-size: 12px;
+          padding: 11px;
+        }
+        .score-card {
+          padding: 16px;
+        }
+        .score-grid {
+          gap: 10px;
+        }
+        footer {
+          margin: 28px 18px 0;
+          flex-wrap: wrap;
+          gap: 8px 15px;
+        }
+        footer span:last-child {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        button,
+        .answer {
+          transition: background 0.15s ease;
+        }
+      }
+    </style>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="brand">WEWORK</div>
+        <div class="title-block">
+          <div class="app-title">Digital Maturity Index</div>
+          <div class="subtitle">Flexible Workspace Industry</div>
+        </div>
+        <div class="state-nav" aria-label="Assessment status">
+          <span id="assessment-tab" class="active">Assessment</span
+          ><span id="results-tab">Results</span>
+        </div>
+        <div class="mark" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="assessment-view" aria-labelledby="assessment-heading">
+        <div class="eyebrow" id="step-label">Step 1 of 5</div>
+        <h1 id="assessment-heading" tabindex="-1">
+          Workspace &amp; Portfolio Data
+        </h1>
+        <p class="lead">
+          Answer the following questions based on your organization’s current
+          state.
+        </p>
+        <div class="progress-row">
+          <span>Assessment progress</span
+          ><span id="progress-text" role="status" aria-live="polite"
+            >0 of 20 answered</span
+          >
+        </div>
+        <progress
+          id="overall-progress"
+          max="20"
+          value="0"
+          aria-label="Questions answered"
+        ></progress>
+        <ol class="steps" id="steps"></ol>
+        <form id="assessment-form">
+          <div id="dimensions"></div>
+          <div class="submit-panel">
+            <div>
+              <strong>Ready to see your digital maturity?</strong>
+              <p id="submit-help">
+                Answer all 20 questions to unlock your results.
+              </p>
+            </div>
+            <button
+              type="submit"
+              class="primary"
+              id="submit-button"
+              disabled
+              aria-describedby="submit-help"
+            >
+              View My Results →
+            </button>
+          </div>
+        </form>
+        <p class="placeholder-note">
+          Working framework · Placeholder diagnostic questions and maturity
+          definitions. Choose the highest level your organization consistently
+          meets. Responses stay in memory for this session only.
+        </p>
+      </section>
+      <section id="results-view" hidden aria-labelledby="results-heading">
+        <div class="results-heading">
+          <div>
+            <h1 id="results-heading" tabindex="-1">
+              Your Digital Maturity Results
+            </h1>
+            <p class="lead">
+              Your organization’s maturity across the five capability
+              dimensions.
+            </p>
+          </div>
+          <button type="button" id="retake-button" class="secondary">
+            ↻ Retake Assessment
+          </button>
+        </div>
+        <div class="results-layout">
+          <div class="results-column">
+            <div class="panel chart-panel">
+              <h2>Digital Maturity Index</h2>
+              <p>Flexible Workspace Industry</p>
+              <div class="chart-container">
+                <canvas
+                  id="radar-chart"
+                  role="img"
+                  aria-label="Radar chart of your five dimension scores; equivalent scores appear in the score cards."
+                ></canvas>
+                <p id="chart-unavailable" hidden>
+                  Connect to the internet and reopen this file to load the radar
+                  chart. Your calculated scores are shown in the cards.
+                </p>
+              </div>
+              <div class="chart-key">Your dimension scores · 1–5</div>
+            </div>
+            <div class="panel profile-panel" id="profile"></div>
+          </div>
+          <div class="results-column">
+            <div id="score-cards" class="score-grid"></div>
+            <div id="lowest" class="panel lowest-panel"></div>
+          </div>
+        </div>
+        <p class="placeholder-note">
+          Working framework · Scores reflect your self-assessment. Stage
+          definitions and profile rules are placeholders, not industry
+          benchmarks.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <strong>WEWORK</strong
+      ><span
+        >Digital Transformation&nbsp; | &nbsp;AI Strategy &amp; Competitive
+        Advantage</span
+      ><span>Flexible Spaces. Smarter Decisions.</span>
+    </footer>
+    <script>
+      "use strict";
+      // CONTENT: Replace these placeholder questions and their five answer labels here.
+      // Each question retains a stable ID; values are explicit integers from 1 through 5.
+      const question = (id, text, labels) => ({
+        id,
+        text,
+        answers: labels.map((label, index) => ({ value: index + 1, label })),
+      });
+      const dimensions = [
+        {
+          id: "data",
+          name: "Workspace & Portfolio Data",
+          questions: [
+            question(
+              "data1",
+              "How is workspace utilization data collected across locations?",
+              [
+                "Primarily manual or unavailable",
+                "Collected digitally at selected locations",
+                "Collected consistently across most locations",
+                "Integrated with portfolio reporting and analytics",
+                "Updated in real time and routinely used in operating decisions",
+              ],
+            ),
+            question(
+              "data2",
+              "How are financial and lease records connected to workspace operating data?",
+              [
+                "Maintained in separate files with no shared identifiers",
+                "Combined manually for occasional reports",
+                "Linked using shared identifiers in scheduled reports",
+                "Integrated automatically in a governed portfolio data platform",
+                "Integrated data is continuously validated and used in scenario planning",
+              ],
+            ),
+            question(
+              "data3",
+              "How is occupancy and demand data used for forecasting?",
+              [
+                "No recurring data-based forecasts",
+                "Local teams prepare occasional spreadsheet forecasts",
+                "Most locations use a common monthly forecasting process",
+                "Portfolio forecasts combine occupancy, pipeline, and pricing data",
+                "Forecasts refresh automatically and accuracy is tracked to improve decisions",
+              ],
+            ),
+            question(
+              "data4",
+              "How do teams access and govern portfolio data?",
+              [
+                "Records are held by individuals without common definitions",
+                "Some teams share files with locally defined metrics",
+                "Common definitions and role-based access cover most locations",
+                "Named owners maintain a shared catalog and automated quality checks",
+                "Quality, access, and usage are continuously monitored across the portfolio",
+              ],
+            ),
+          ],
+        },
+        {
+          id: "member",
+          name: "Member Digital Experience",
+          questions: [
+            question(
+              "member1",
+              "How do members book desks, rooms, and shared amenities?",
+              [
+                "Staff handle bookings manually",
+                "Digital booking is available at selected locations",
+                "Members self-book through a common platform at most locations",
+                "Booking connects to access, billing, and live availability",
+                "Integrated booking adapts to member preferences and is improved using usage data",
+              ],
+            ),
+            question(
+              "member2",
+              "How is the member onboarding process delivered?",
+              [
+                "Paper forms and manual staff coordination",
+                "Some forms are digital but re-entry is required",
+                "A standard digital onboarding workflow serves most locations",
+                "Contracts, payments, access, and welcome steps are connected",
+                "Onboarding completion is monitored automatically and friction is routinely resolved",
+              ],
+            ),
+            question(
+              "member3",
+              "How are member service requests tracked and resolved?",
+              [
+                "Requests arrive informally with no shared record",
+                "Some teams use a digital ticket list",
+                "Most locations use a shared ticket system with service targets",
+                "Tickets route automatically and members can track status",
+                "Resolution trends and feedback drive documented service improvements",
+              ],
+            ),
+            question(
+              "member4",
+              "How is member feedback connected to service improvements?",
+              [
+                "Feedback is collected informally or not recorded",
+                "Individual locations run occasional digital surveys",
+                "A common feedback process tracks issues across most locations",
+                "Feedback links to member records and assigned improvement actions",
+                "Teams measure the impact of changes and regularly refine the member journey",
+              ],
+            ),
+          ],
+        },
+        {
+          id: "operations",
+          name: "Workspace Operations Automation",
+          questions: [
+            question(
+              "operations1",
+              "How are recurring invoices and membership changes processed?",
+              [
+                "Invoices and changes are entered manually",
+                "Invoice templates are digital but require manual reconciliation",
+                "Recurring billing is automated for most memberships",
+                "Billing synchronizes with contracts, bookings, and finance systems",
+                "Exceptions are automatically flagged and billing performance is continuously reviewed",
+              ],
+            ),
+            question(
+              "operations2",
+              "How are maintenance tasks scheduled and tracked?",
+              [
+                "Staff rely on calls and paper records",
+                "Selected locations use digital task lists",
+                "A shared system schedules preventive maintenance at most sites",
+                "Equipment alerts create and route work orders automatically",
+                "Condition data optimizes maintenance schedules and measured asset performance",
+              ],
+            ),
+            question(
+              "operations3",
+              "How is building access provisioned and removed?",
+              [
+                "Keys or access permissions are managed manually",
+                "Digital access exists at some sites with manual updates",
+                "Standard digital access processes cover most locations",
+                "Access updates automatically from active membership and booking records",
+                "Exceptions are monitored and access controls are regularly audited and improved",
+              ],
+            ),
+            question(
+              "operations4",
+              "How are location operating workflows standardized?",
+              [
+                "Each site manages tasks independently",
+                "Some sites document tasks in digital checklists",
+                "Most locations use shared workflows and task ownership",
+                "Connected workflows automate handoffs and escalate exceptions",
+                "Workflow performance is measured and improvements are deployed across the portfolio",
+              ],
+            ),
+          ],
+        },
+        {
+          id: "ai",
+          name: "AI-Enabled Portfolio Intelligence",
+          questions: [
+            question(
+              "ai1",
+              "How are predictive models used in occupancy planning?",
+              [
+                "No predictive models are used",
+                "Teams run isolated forecasting experiments",
+                "A documented model supports recurring planning at selected sites",
+                "Validated models inform planning across most of the portfolio",
+                "Model accuracy and drift are monitored with regular retraining and human review",
+              ],
+            ),
+            question(
+              "ai2",
+              "How is advanced analytics used in workspace pricing?",
+              [
+                "Prices are set without structured analysis",
+                "Teams run occasional pricing analyses",
+                "Repeatable analytics inform scheduled pricing reviews",
+                "Models recommend prices using demand and capacity with approval controls",
+                "Pricing models are monitored for outcomes and constraints and systematically refined",
+              ],
+            ),
+            question(
+              "ai3",
+              "How are AI-assisted tools used in member support?",
+              [
+                "No AI-assisted support tools are used",
+                "Individuals experiment without a shared workflow",
+                "An approved pilot assists staff with documented human review",
+                "AI assistance is integrated into support with escalation and quality controls",
+                "Quality, member outcomes, and risks are continuously monitored and improved",
+              ],
+            ),
+            question("ai4", "How are analytics and AI initiatives evaluated?", [
+              "No formal evaluation process exists",
+              "Pilots report informal observations",
+              "Initiatives have owners, baselines, and documented success measures",
+              "Performance and risk reviews determine portfolio-wide rollout",
+              "Ongoing outcome monitoring drives investment, model changes, and retirement decisions",
+            ]),
+          ],
+        },
+        {
+          id: "operating",
+          name: "Digital Operating Model",
+          questions: [
+            question(
+              "operating1",
+              "How are digital investment decisions owned and governed?",
+              [
+                "Decisions are ad hoc with no named owner",
+                "Individual departments own separate digital initiatives",
+                "A cross-functional group reviews a shared roadmap",
+                "Clear decision rights and funding link the roadmap to portfolio priorities",
+                "Governance routinely adjusts investment using measured business outcomes",
+              ],
+            ),
+            question(
+              "operating2",
+              "How are digital skills developed across location teams?",
+              [
+                "No structured digital training is provided",
+                "Training is offered when individual needs arise",
+                "Role-based training is available to most teams",
+                "Skills assessments and adoption measures guide ongoing development",
+                "Capability gaps are continuously assessed and learning outcomes inform workforce planning",
+              ],
+            ),
+            question(
+              "operating3",
+              "How are new digital processes introduced across locations?",
+              [
+                "Changes are announced without a rollout process",
+                "Teams use informal pilots and local instructions",
+                "A repeatable rollout plan assigns owners and training",
+                "Change champions track adoption and resolve barriers across sites",
+                "Adoption and outcome evidence continuously improve the rollout approach",
+              ],
+            ),
+            question(
+              "operating4",
+              "How is accountability for digital outcomes maintained?",
+              [
+                "No shared digital outcome measures exist",
+                "Departments track their own activity measures",
+                "Named owners report common outcome measures periodically",
+                "Leaders review outcomes against targets and assign corrective actions",
+                "Outcome reviews continually reshape priorities, incentives, and operating practices",
+              ],
+            ),
+          ],
+        },
+      ];
+      // Replace with the Framework Designer’s final Stage 1–5 names and descriptions.
+      // Apply thresholds to full-precision averages, not the rounded display value.
+      const stageDefinitions = [
+        {
+          min: 1,
+          number: 1,
+          name: "Foundational",
+          description:
+            "Work relies on manual tasks and isolated practices; shared digital foundations are limited.",
+        },
+        {
+          min: 2,
+          number: 2,
+          name: "Emerging",
+          description:
+            "Digital tools and local pilots are in place, but practices are not yet consistent across locations.",
+        },
+        {
+          min: 3,
+          number: 3,
+          name: "Developing",
+          description:
+            "Common digital practices are established, with opportunities to connect and scale them.",
+        },
+        {
+          min: 4,
+          number: 4,
+          name: "Integrated",
+          description:
+            "Connected systems and shared practices inform decisions across the portfolio.",
+        },
+        {
+          min: 4.5,
+          number: 5,
+          name: "Adaptive",
+          description:
+            "Measured outcomes and continuous improvement guide digital practices across the portfolio.",
+        },
+      ];
+      // Replace these five placeholder profiles, interpretations, and recommended actions.
+      const maturityProfiles = {
+        foundations: {
+          name: "Building the Foundations",
+          interpretation:
+            "Digital practices are at an early stage across all five dimensions. Establishing consistent records, ownership, and repeatable workflows can create a base for future investment.",
+          action:
+            "Assign an owner to standardize one core data and operating workflow across a small group of locations.",
+        },
+        connected: {
+          name: "Connected & Adaptive",
+          interpretation:
+            "Digital capabilities are integrated across all five dimensions. Shared data, member services, automation, intelligence, and governance provide a strong base for continuous improvement.",
+          action:
+            "Select one portfolio outcome and run a measured improvement cycle across the connected operating model.",
+        },
+        dataGap: {
+          name: "Data Foundation Gap",
+          interpretation:
+            "Workspace and portfolio data trails the other capabilities. Inconsistent or disconnected records can constrain otherwise established digital services and decision processes.",
+          action:
+            "Define shared portfolio metrics, assign data owners, and reconcile one priority dataset across locations.",
+        },
+        experienceGap: {
+          name: "Digital Experience, Untapped Intelligence",
+          interpretation:
+            "Member-facing digital capabilities are established while AI-enabled portfolio intelligence remains early. Existing member and operating signals offer a starting point for a governed analytics pilot.",
+          action:
+            "Pilot one occupancy forecast with a named owner, validated data, human review, and a measured accuracy target.",
+        },
+        execution: {
+          name: "Execution Gap",
+          interpretation:
+            "Digital capabilities are ahead of the operating model that supports them. Gaps in ownership, skills, and change practices can limit consistent adoption across locations.",
+          action:
+            "Establish cross-functional governance with clear decision rights, accountable owners, and a shared change management plan.",
+        },
+      };
+      const mean = (values) =>
+        values.reduce((sum, value) => sum + value, 0) / values.length;
+      // First matching rule wins. Uniform = every score in the band; significant gap = 1 point.
+      // Keep precedence and thresholds here for replacement by the final Interpretation Guide.
+      const profileMatchingRules = [
+        { profile: "foundations", matches: (s) => s.every((v) => v < 3) },
+        { profile: "connected", matches: (s) => s.every((v) => v >= 4) },
+        { profile: "dataGap", matches: (s) => mean(s.slice(1)) - s[0] >= 1 },
+        { profile: "experienceGap", matches: (s) => s[1] >= 4 && s[3] < 3 },
+        {
+          profile: "execution",
+          matches: (s) => mean(s.slice(0, 4)) - s[4] >= 1,
+        },
+      ];
+      function scoreAssessment(responses) {
+        if (
+          !dimensions.every((d) =>
+            d.questions.every(
+              (q) =>
+                Number.isInteger(responses[q.id]) &&
+                q.answers.some((a) => a.value === responses[q.id]),
+            ),
+          )
+        )
+          throw new Error("All 20 questions must have one valid response.");
+        return dimensions.map((d) =>
+          mean(d.questions.map((q) => responses[q.id])),
+        );
+      }
+      function stageFor(score) {
+        return [...stageDefinitions]
+          .reverse()
+          .find((stage) => score >= stage.min);
+      }
+      // Stable tie break: original dimension order, so exactly two are always selected.
+      function lowestDimensions(scores) {
+        return scores
+          .map((score, index) => ({
+            score,
+            index,
+            name: dimensions[index].name,
+          }))
+          .sort((a, b) => a.score - b.score || a.index - b.index)
+          .slice(0, 2);
+      }
+      function selectProfile(scores) {
+        const rule = profileMatchingRules.find((rule) => rule.matches(scores));
+        if (rule) return maturityProfiles[rule.profile];
+        const lowest = lowestDimensions(scores);
+        return {
+          name: "Building a Balanced Portfolio",
+          interpretation: `Your capability mix does not match a specialized profile. ${lowest[0].name} and ${lowest[1].name} are the two lowest-scoring dimensions and provide a consistent starting point for prioritization.`,
+          action: `Set one measurable improvement target for ${lowest[0].name}, with a named owner and a review date, then review dependencies with ${lowest[1].name}.`,
+        };
+      }
+      const totalQuestions = dimensions.reduce(
+        (sum, d) => sum + d.questions.length,
+        0,
+      );
+      let responses = {},
+        activeDimension = 0,
+        radarChart = null;
+      const $ = (id) => document.getElementById(id);
+      const escapeHTML = (value) =>
+        String(value).replace(
+          /[&<>"']/g,
+          (char) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[char],
+        );
+      function renderAssessment() {
+        $("steps").innerHTML = dimensions
+          .map(
+            (d, i) =>
+              `<li><button type="button" class="step-button" data-step="${i}" aria-controls="dimension-${i}" ${i === 0 ? 'aria-current="step"' : ""}><span class="step-number">${i + 1}</span><span class="step-name">${escapeHTML(d.name)}</span></button></li>`,
+          )
+          .join("");
+        $("dimensions").innerHTML = dimensions
+          .map(
+            (d, i) =>
+              `<details class="dimension" id="dimension-${i}" ${i === 0 ? "open" : ""}><summary><span class="dimension-index">${i + 1}</span><span>${escapeHTML(d.name)}</span><span class="dimension-count" id="count-${i}">0 of 4 answered</span></summary><div class="dimension-body">${d.questions.map((q, qi) => `<fieldset><legend><span class="q-number">Q${qi + 1}</span>${escapeHTML(q.text)}</legend><div class="answers">${q.answers.map((a) => `<label class="answer"><input type="radio" required name="${q.id}" value="${a.value}"><span><span class="answer-value">${a.value}</span> — ${escapeHTML(a.label)}</span></label>`).join("")}</div></fieldset>`).join("")}<div class="dimension-controls"><button type="button" class="secondary" data-step="${i - 1}" ${i === 0 ? "disabled" : ""}>← Previous</button>${i < dimensions.length - 1 ? `<button type="button" class="primary" data-step="${i + 1}">Next: ${escapeHTML(dimensions[i + 1].name)} →</button>` : '<button type="button" class="secondary" id="review-progress">Review completion ↓</button>'}</div></div></details>`,
+          )
+          .join("");
+        document.querySelectorAll(".dimension").forEach((detail, i) =>
+          detail.addEventListener("toggle", () => {
+            if (detail.open) {
+              activeDimension = i;
+              document.querySelectorAll(".dimension").forEach((other) => {
+                if (other !== detail) other.open = false;
+              });
+              updateActiveDimension();
+            }
+          }),
+        );
+        updateProgress();
+        updateActiveDimension();
+      }
+      function updateActiveDimension() {
+        $("assessment-heading").textContent = dimensions[activeDimension].name;
+        $("step-label").textContent =
+          `Step ${activeDimension + 1} of ${dimensions.length}`;
+        document.querySelectorAll(".step-button").forEach((button, i) => {
+          if (i === activeDimension)
+            button.setAttribute("aria-current", "step");
+          else button.removeAttribute("aria-current");
+        });
+      }
+      function openDimension(index) {
+        if (index < 0 || index >= dimensions.length) return;
+        activeDimension = index;
+        document.querySelectorAll(".dimension").forEach((detail, i) => {
+          detail.open = i === index;
+        });
+        updateActiveDimension();
+        $("assessment-heading").focus({ preventScroll: true });
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+      function updateProgress() {
+        const count = Object.keys(responses).length;
+        $("overall-progress").value = count;
+        $("progress-text").textContent =
+          `${count} of ${totalQuestions} answered`;
+        $("submit-button").disabled = count !== totalQuestions;
+        $("submit-help").textContent =
+          count === totalQuestions
+            ? "All questions answered. Your results are ready to calculate."
+            : `Answer all ${totalQuestions} questions to unlock your results. ${totalQuestions - count} remaining.`;
+        dimensions.forEach((d, i) => {
+          const answered = d.questions.filter(
+            (q) => responses[q.id] !== undefined,
+          ).length;
+          $("count-" + i).textContent =
+            `${answered} of ${d.questions.length} answered`;
+          document
+            .querySelectorAll(".step-button")
+            [i].classList.toggle("complete", answered === d.questions.length);
+        });
+      }
+      function renderResults(scores) {
+        const profile = selectProfile(scores),
+          lowest = lowestDimensions(scores);
+        $("score-cards").innerHTML = dimensions
+          .map((d, i) => {
+            const stage = stageFor(scores[i]);
+            return `<article class="panel score-card ${scores[i] < 2.5 ? "low" : scores[i] < 4 ? "mid" : ""}"><div class="score">${scores[i].toFixed(1)} <small>/ 5</small></div><div class="score-bar" aria-hidden="true"><span style="width:${(scores[i] / 5) * 100}%"></span></div><h3>${escapeHTML(d.name)}</h3><p class="stage">Stage ${stage.number} — ${escapeHTML(stage.name)}</p><p class="stage-description">${escapeHTML(stage.description)}</p></article>`;
+          })
+          .join("");
+        $("profile").innerHTML =
+          `<div class="profile-label">Your Maturity Profile</div><h2>${escapeHTML(profile.name)}</h2><p>${escapeHTML(profile.interpretation)}</p><div class="next-action"><h3>Recommended Next Action</h3><p>${escapeHTML(profile.action)}</p></div>`;
+        $("lowest").innerHTML =
+          `<h2>Lowest-Scoring Dimensions</h2><ol>${lowest.map((d) => `<li>${escapeHTML(d.name)} (${d.score.toFixed(1)})</li>`).join("")}</ol><p class="tie-note">Ranked using unrounded scores. Ties follow the assessment’s dimension order.</p>`;
+        $("assessment-view").hidden = true;
+        $("results-view").hidden = false;
+        $("assessment-tab").classList.remove("active");
+        $("results-tab").classList.add("active");
+        if (radarChart) {
+          radarChart.destroy();
+          radarChart = null;
+        }
+        const chartReady = typeof Chart !== "undefined";
+        $("radar-chart").hidden = !chartReady;
+        $("chart-unavailable").hidden = chartReady;
+        if (chartReady)
+          radarChart = new Chart($("radar-chart"), {
+            type: "radar",
+            data: {
+              labels: dimensions.map((d) => d.name),
+              datasets: [
+                {
+                  label: "Your maturity",
+                  data: scores,
+                  borderColor: "#007d80",
+                  backgroundColor: "rgba(0,125,128,.20)",
+                  pointBackgroundColor: "#007d80",
+                  pointRadius: 4,
+                  borderWidth: 2,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              animation: false,
+              layout: { padding: 8 },
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: {
+                    label: (context) => `Score: ${context.raw.toFixed(1)} / 5`,
+                  },
+                },
+              },
+              scales: {
+                r: {
+                  min: 1,
+                  max: 5,
+                  ticks: {
+                    stepSize: 1,
+                    color: "#49617b",
+                    backdropColor: "transparent",
+                    font: { size: 11 },
+                  },
+                  grid: { color: "#d5e0e9" },
+                  angleLines: { color: "#d5e0e9" },
+                  pointLabels: {
+                    color: "#152d4e",
+                    font: { size: 11 },
+                    callback: (label) => {
+                      const lines = [];
+                      let line = "";
+                      label.split(" ").forEach((word) => {
+                        if ((line + " " + word).trim().length > 19) {
+                          lines.push(line);
+                          line = word;
+                        } else line = (line + " " + word).trim();
+                      });
+                      if (line) lines.push(line);
+                      return lines;
+                    },
+                  },
+                },
+              },
+            },
+          });
+        $("results-heading").focus({ preventScroll: true });
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+      $("assessment-form").addEventListener("change", (event) => {
+        if (event.target.matches('input[type="radio"]')) {
+          responses[event.target.name] = Number(event.target.value);
+          updateProgress();
+        }
+      });
+      $("assessment-view").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-step]");
+        if (button && !button.disabled)
+          openDimension(Number(button.dataset.step));
+        if (event.target.closest("#review-progress")) {
+          $("submit-button").scrollIntoView({ block: "center" });
+        }
+      });
+      $("assessment-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (Object.keys(responses).length !== totalQuestions) return;
+        renderResults(scoreAssessment(responses));
+      });
+      $("retake-button").addEventListener("click", () => {
+        if (radarChart) {
+          radarChart.destroy();
+          radarChart = null;
+        }
+        responses = {};
+        activeDimension = 0;
+        $("assessment-form").reset();
+        $("results-view").hidden = true;
+        $("assessment-view").hidden = false;
+        $("score-cards").replaceChildren();
+        $("profile").replaceChildren();
+        $("lowest").replaceChildren();
+        $("assessment-tab").classList.add("active");
+        $("results-tab").classList.remove("active");
+        renderAssessment();
+        openDimension(0);
+      });
+      renderAssessment();
+    </script>
+  </body>
 </html>

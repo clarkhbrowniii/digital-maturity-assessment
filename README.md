@@ -4,7 +4,15 @@ A browser-based assessment for the flexible workspace industry, delivered as a s
 
 ## Run
 
-Open `digital-maturity-index.html` directly in Chrome or Firefox. No server, installation, or build step is required. An internet connection is needed to load Chart.js from its CDN.
+Open `index.html` directly in Chrome or Firefox. No server, installation, or build step is required. An internet connection is needed to load Chart.js from its CDN.
+
+## GitHub Pages
+
+Commit and push `index.html` and the removal of the old filename to `main`. In the repository's **Settings > Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, and save.
+
+After deployment, the assessment will be available at https://clarkhbrowniii.github.io/digital-maturity-assessment/.
+
+The root-level `index.html` is the site's entry page. See [GitHub's publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 ## Assessment
 

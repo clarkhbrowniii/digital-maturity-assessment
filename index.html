@@ -724,12 +724,12 @@
         <div class="progress-row">
           <span>Assessment progress</span
           ><span id="progress-text" role="status" aria-live="polite"
-            >0 of 20 answered</span
+            >0 of 15 answered</span
           >
         </div>
         <progress
           id="overall-progress"
-          max="20"
+          max="15"
           value="0"
           aria-label="Questions answered"
         ></progress>
@@ -740,7 +740,7 @@
             <div>
               <strong>Ready to see your digital maturity?</strong>
               <p id="submit-help">
-                Answer all 20 questions to unlock your results.
+                Answer all 15 questions to unlock your results.
               </p>
             </div>
             <button
@@ -816,7 +816,7 @@
     </footer>
     <script>
       "use strict";
-      // CONTENT: Replace these placeholder questions and their five answer labels here.
+      // CONTENT: Questions and answer labels from the Flexible Workspace Digital Maturity Assessment.
       // Each question retains a stable ID; values are explicit integers from 1 through 5.
       const question = (id, text, labels) => ({
         id,
@@ -830,46 +830,35 @@
           questions: [
             question(
               "data1",
-              "How is workspace utilization data collected across locations?",
+              "How is physical space utilization captured across your portfolio?",
               [
-                "Primarily manual or unavailable",
-                "Collected digitally at selected locations",
-                "Collected consistently across most locations",
-                "Integrated with portfolio reporting and analytics",
-                "Updated in real time and routinely used in operating decisions",
+                "Utilization data is not systematically tracked or relies on occasional physical headcounts.",
+                "Space utilization is tracked via periodic badge swipes or front-desk check-in logs aggregated manually in spreadsheets.",
+                "Dedicated IoT presence sensors or Wi-Fi triangulation capture hourly zone occupancy across core enterprise locations.",
+                "Desk- and room-level sensor telemetry is continuously aggregated into a centralized data warehouse across all operational sites.",
+                "Real-time streaming sensor feeds dynamically trigger automated HVAC adjustments, live floor-plan heatmaps, and continuous capacity alerts.",
               ],
             ),
             question(
               "data2",
-              "How are financial and lease records connected to workspace operating data?",
+              "How are location-level lease commitments connected to daily operating and revenue metrics?",
               [
-                "Maintained in separate files with no shared identifiers",
-                "Combined manually for occasional reports",
-                "Linked using shared identifiers in scheduled reports",
-                "Integrated automatically in a governed portfolio data platform",
-                "Integrated data is continuously validated and used in scenario planning",
+                "Master lease agreements, utility bills, and member revenues are maintained in disconnected legacy accounting ledgers.",
+                "Lease terms and square footage figures are manually reconciled against monthly billing statements for executive reviews.",
+                "A shared database matches building lease expiration dates and rent schedules against high-level property revenues.",
+                "Enterprise data models dynamically link granular seat license billings directly to location-specific lease liabilities and variable operational overhead.",
+                "Portfolio data pipelines unify real-time net effective rent, lease termination exposure, and margin-per-desk into automated margin-at-risk monitoring dashboards.",
               ],
             ),
             question(
               "data3",
-              "How is occupancy and demand data used for forecasting?",
+              "How is historical desk occupancy integrated into future capacity planning?",
               [
-                "No recurring data-based forecasts",
-                "Local teams prepare occasional spreadsheet forecasts",
-                "Most locations use a common monthly forecasting process",
-                "Portfolio forecasts combine occupancy, pipeline, and pricing data",
-                "Forecasts refresh automatically and accuracy is tracked to improve decisions",
-              ],
-            ),
-            question(
-              "data4",
-              "How do teams access and govern portfolio data?",
-              [
-                "Records are held by individuals without common definitions",
-                "Some teams share files with locally defined metrics",
-                "Common definitions and role-based access cover most locations",
-                "Named owners maintain a shared catalog and automated quality checks",
-                "Quality, access, and usage are continuously monitored across the portfolio",
+                "Desk planning relies entirely on location manager intuition and annual lease targets without historical modeling.",
+                "Past occupancy percentages are reviewed quarterly in static PDF reports to adjust basic staffing expectations.",
+                "Multi-year occupancy trends are mapped against local contract renewal calendars to set market pricing minimums.",
+                "Historical seat demand variance is programmatically combined with pipeline CRM stages to dictate floor reconfigurations.",
+                "Continuous pipeline velocity and historical multi-location drop-off patterns feed programmatic scenario models that dictate expansion and down-sizing timelines.",
               ],
             ),
           ],
@@ -880,46 +869,35 @@
           questions: [
             question(
               "member1",
-              "How do members book desks, rooms, and shared amenities?",
+              "What primary channel do enterprise and hot-desk members use to manage bookings and workplace access?",
               [
-                "Staff handle bookings manually",
-                "Digital booking is available at selected locations",
-                "Members self-book through a common platform at most locations",
-                "Booking connects to access, billing, and live availability",
-                "Integrated booking adapts to member preferences and is improved using usage data",
+                "Bookings and room reservations are handled verbally with community managers or recorded on paper logbooks.",
+                "Members reserve conference rooms via email requests, dedicated web forms, or localized desktop portals.",
+                "A proprietary mobile application enables self-service room bookings and digital keycard door access across standard facilities.",
+                "The mobile application unifies room access, guest registration, digital billing, support ticketing, and tiered desk reservations across global locations.",
+                "An integrated member portal automates cross-city room allocations, enterprise identity management (SSO), and usage-tailored workplace amenities.",
               ],
             ),
             question(
               "member2",
-              "How is the member onboarding process delivered?",
+              "How are member support issues, facilities requests, and IT tickets resolved?",
               [
-                "Paper forms and manual staff coordination",
-                "Some forms are digital but re-entry is required",
-                "A standard digital onboarding workflow serves most locations",
-                "Contracts, payments, access, and welcome steps are connected",
-                "Onboarding completion is monitored automatically and friction is routinely resolved",
+                "Member issues are reported in person at the front desk or via unstructured email chains to on-site building managers.",
+                "Requests are manually cataloged into a single digital inbox and triaged without formalized SLAs.",
+                "A ticketing platform routes maintenance and network tickets to local site teams based on category selection.",
+                "An omnichannel support system routes member tickets automatically, tracking first-response times and escalations against SLA benchmarks.",
+                "Context-aware digital systems resolve standard requests via automated self-service workflows while routing urgent facility anomalies based on historical resolution velocity.",
               ],
             ),
             question(
               "member3",
-              "How are member service requests tracked and resolved?",
+              "How are community events, enterprise networking, and localized offerings delivered to occupants?",
               [
-                "Requests arrive informally with no shared record",
-                "Some teams use a digital ticket list",
-                "Most locations use a shared ticket system with service targets",
-                "Tickets route automatically and members can track status",
-                "Resolution trends and feedback drive documented service improvements",
-              ],
-            ),
-            question(
-              "member4",
-              "How is member feedback connected to service improvements?",
-              [
-                "Feedback is collected informally or not recorded",
-                "Individual locations run occasional digital surveys",
-                "A common feedback process tracks issues across most locations",
-                "Feedback links to member records and assigned improvement actions",
-                "Teams measure the impact of changes and regularly refine the member journey",
+                "Announcements are posted on physical bulletin boards or distributed via printed elevator notices.",
+                "Site-wide broadcast emails notify all building occupants of monthly mixers or building updates.",
+                "An in-app events calendar lists scheduled programming, requiring manual RSVP submissions.",
+                "In-app community feeds personalize event visibility and professional networking prompts based on member industry and declared company size.",
+                "Algorithmic member matching delivers targeted business development introductions and dynamically curated local workspace perks based on observed foot traffic.",
               ],
             ),
           ],
@@ -930,46 +908,35 @@
           questions: [
             question(
               "operations1",
-              "How are recurring invoices and membership changes processed?",
+              "How are facility maintenance requests and cleaning schedules triggered?",
               [
-                "Invoices and changes are entered manually",
-                "Invoice templates are digital but require manual reconciliation",
-                "Recurring billing is automated for most memberships",
-                "Billing synchronizes with contracts, bookings, and finance systems",
-                "Exceptions are automatically flagged and billing performance is continuously reviewed",
+                "Cleaning routines and preventive maintenance follow fixed, unadjusted calendar rotations regardless of building traffic.",
+                "Maintenance work orders are manually initiated only after physical occupant complaints reach the community desk.",
+                "Cleaning crews follow static daily checklists that are marked complete via localized mobile forms.",
+                "Sensor-based desk and restroom foot-traffic thresholds dynamically trigger custodial task queues in property operations software.",
+                "Predictive facilities software auto-dispatches maintenance vendors and optimizes custodial routing using live usage telemetry and component runtime metrics.",
               ],
             ),
             question(
               "operations2",
-              "How are maintenance tasks scheduled and tracked?",
+              "What workflow governs new member onboarding, desk provisioning, and access badging?",
               [
-                "Staff rely on calls and paper records",
-                "Selected locations use digital task lists",
-                "A shared system schedules preventive maintenance at most sites",
-                "Equipment alerts create and route work orders automatically",
-                "Condition data optimizes maintenance schedules and measured asset performance",
+                "Community teams manually configure keycards, issue Wi-Fi passwords, and generate contract agreements on paper.",
+                "Welcome emails with static network credentials are manually sent after signed PDFs are uploaded to storage.",
+                "Web checkout triggers automated welcome emails and populates a localized door-access entry for manual site approval.",
+                "CRM deal closure automatically provisions digital badges, member profiles, and enterprise network profiles without human touch.",
+                "Zero-touch provisioning synchronizes enterprise client HR directories (SCIM) directly with physical turnstiles, private Wi-Fi subnets, and meeting allotments.",
               ],
             ),
             question(
               "operations3",
-              "How is building access provisioned and removed?",
+              "How are utility systems (HVAC, lighting, acoustic masking) managed across business hours?",
               [
-                "Keys or access permissions are managed manually",
-                "Digital access exists at some sites with manual updates",
-                "Standard digital access processes cover most locations",
-                "Access updates automatically from active membership and booking records",
-                "Exceptions are monitored and access controls are regularly audited and improved",
-              ],
-            ),
-            question(
-              "operations4",
-              "How are location operating workflows standardized?",
-              [
-                "Each site manages tasks independently",
-                "Some sites document tasks in digital checklists",
-                "Most locations use shared workflows and task ownership",
-                "Connected workflows automate handoffs and escalate exceptions",
-                "Workflow performance is measured and improvements are deployed across the portfolio",
+                "Thermostats and lighting banks are adjusted manually via physical wall switches by opening and closing staff.",
+                "Utility schedules operate on rigid weekly timers irrespective of true occupant counts or holidays.",
+                "Centralized building management systems (BMS) allow site managers to remotely modify environmental schedules via web dashboards.",
+                "Environmental zones modulate automatically according to aggregate badge swipe volume and scheduled calendar meetings.",
+                "IoT edge controllers continuously balance multi-zone HVAC and ambient lighting against minute-by-minute occupancy, dynamic utility spot prices, and thermal load sensors.",
               ],
             ),
           ],
@@ -980,44 +947,37 @@
           questions: [
             question(
               "ai1",
-              "How are predictive models used in occupancy planning?",
+              "How is flexible workspace desk pricing and contract discount authorization determined?",
               [
-                "No predictive models are used",
-                "Teams run isolated forecasting experiments",
-                "A documented model supports recurring planning at selected sites",
-                "Validated models inform planning across most of the portfolio",
-                "Model accuracy and drift are monitored with regular retraining and human review",
+                "Desk rates are fixed by static rate cards, with ad-hoc discounting left to individual sales rep discretion.",
+                "Sales leadership reviews localized spreadsheets monthly to manually revise promotional discounts by city.",
+                "Rate cards adjust quarterly based on historical submarket averages and competitors' advertised rates.",
+                "Dynamic pricing models recommend desk and office rates based on real-time pipeline volume, seasonal move-ins, and local vacancy.",
+                "Machine learning models continuously compute real-time dynamic rates across enterprise tiers, executing programmatic discounting within optimized risk-adjusted margin guardrails.",
               ],
             ),
             question(
               "ai2",
-              "How is advanced analytics used in workspace pricing?",
+              "How are churn risks and contract non-renewals identified?",
               [
-                "Prices are set without structured analysis",
-                "Teams run occasional pricing analyses",
-                "Repeatable analytics inform scheduled pricing reviews",
-                "Models recommend prices using demand and capacity with approval controls",
-                "Pricing models are monitored for outcomes and constraints and systematically refined",
+                "Member departures are recognized only upon receipt of formal written lease cancellation notices.",
+                "Community staff informally flag disengaged enterprise accounts based on casual observation.",
+                "Rule-based reports highlight accounts whose recorded badge entries decline by more than 30% month-over-month.",
+                "Multi-factor churn models analyze physical occupancy decline, ticket sentiment, and invoice payment delays to surface accounts at risk.",
+                "Predictive retention algorithms identify micro-signals of churn months in advance, triggering automated targeted incentives and executive retention alerts.",
               ],
             ),
             question(
               "ai3",
-              "How are AI-assisted tools used in member support?",
+              "How does the organization identify and evaluate new property expansion or down-sizing opportunities?",
               [
-                "No AI-assisted support tools are used",
-                "Individuals experiment without a shared workflow",
-                "An approved pilot assists staff with documented human review",
-                "AI assistance is integrated into support with escalation and quality controls",
-                "Quality, member outcomes, and risks are continuously monitored and improved",
+                "Expansion decisions rely on broker pitch decks and senior executive relationships without standardized evaluation.",
+                "Real estate teams review regional commercial demographic reports and spreadsheet-based pro formas.",
+                "Site selection tools score potential geographic submarkets using aggregate municipal census and transportation data.",
+                "Machine learning models screen target locations by ingesting local corporate relocation flows, foot-traffic data, and competitive density.",
+                "Predictive portfolio engines simulate multi-year net absorption, cannibalization of existing locations, and lease downside risks under macro stress scenarios.",
               ],
             ),
-            question("ai4", "How are analytics and AI initiatives evaluated?", [
-              "No formal evaluation process exists",
-              "Pilots report informal observations",
-              "Initiatives have owners, baselines, and documented success measures",
-              "Performance and risk reviews determine portfolio-wide rollout",
-              "Ongoing outcome monitoring drives investment, model changes, and retirement decisions",
-            ]),
           ],
         },
         {
@@ -1026,46 +986,35 @@
           questions: [
             question(
               "operating1",
-              "How are digital investment decisions owned and governed?",
+              "How are software development and digital product enhancements structured within the business?",
               [
-                "Decisions are ad hoc with no named owner",
-                "Individual departments own separate digital initiatives",
-                "A cross-functional group reviews a shared roadmap",
-                "Clear decision rights and funding link the roadmap to portfolio priorities",
-                "Governance routinely adjusts investment using measured business outcomes",
+                "IT is treated as a decentralized support cost center focused solely on fixing broken office hardware.",
+                "Technology needs are outsourced to third-party vendors with minimal internal oversight or strategic roadmap integration.",
+                "Dedicated internal IT teams manage enterprise applications and mobile tools in functional departmental silos.",
+                "Cross-functional product squads (combining software engineering, operations, and commercial leaders) iterate on workspace platforms.",
+                "Product management functions operate alongside core real estate teams, prioritizing enterprise digital solutions based on measurable lifetime value and operating margin gains.",
               ],
             ),
             question(
               "operating2",
-              "How are digital skills developed across location teams?",
+              "How are on-site community and operations teams trained on emerging digital platforms?",
               [
-                "No structured digital training is provided",
-                "Training is offered when individual needs arise",
-                "Role-based training is available to most teams",
-                "Skills assessments and adoption measures guide ongoing development",
-                "Capability gaps are continuously assessed and learning outcomes inform workforce planning",
+                "Operational tooling training is ad-hoc, verbal, and relies on peer shadowing without formal documentation.",
+                "Central operations distributes static PDF training decks and manuals whenever new software is deployed.",
+                "Staff complete digital training modules and standardized testing prior to managing desk locations independently.",
+                "Role-based learning platforms track operational competency and deliver continuous education based on feature rollouts.",
+                "Continuous enablement ecosystems deliver interactive workflow simulations, track tool adoption analytics, and tie field proficiency directly to operational performance incentives.",
               ],
             ),
             question(
               "operating3",
-              "How are new digital processes introduced across locations?",
+              "How are software capital expenditures and digital platform investments governed and measured?",
               [
-                "Changes are announced without a rollout process",
-                "Teams use informal pilots and local instructions",
-                "A repeatable rollout plan assigns owners and training",
-                "Change champions track adoption and resolve barriers across sites",
-                "Adoption and outcome evidence continuously improve the rollout approach",
-              ],
-            ),
-            question(
-              "operating4",
-              "How is accountability for digital outcomes maintained?",
-              [
-                "No shared digital outcome measures exist",
-                "Departments track their own activity measures",
-                "Named owners report common outcome measures periodically",
-                "Leaders review outcomes against targets and assign corrective actions",
-                "Outcome reviews continually reshape priorities, incentives, and operating practices",
+                "Software purchases occur haphazardly on individual corporate credit cards without central oversight.",
+                "Technology requests are evaluated annually during general budgetary approvals with generic cost justification.",
+                "Enterprise IT budgets are centralized, evaluating software spend against baseline operational overhead caps.",
+                "Technology investments require formal business cases measuring anticipated labor hour reductions or incremental member yield.",
+                "Digital capital allocation operates via venture-style governance, linking ongoing funding tranches directly to audited ROI, operational efficiency metrics, and verified ARR expansion.",
               ],
             ),
           ],
@@ -1172,7 +1121,7 @@
             ),
           )
         )
-          throw new Error("All 20 questions must have one valid response.");
+          throw new Error("All 15 questions must have one valid response.");
         return dimensions.map((d) =>
           mean(d.questions.map((q) => responses[q.id])),
         );
@@ -1233,7 +1182,7 @@
         $("dimensions").innerHTML = dimensions
           .map(
             (d, i) =>
-              `<details class="dimension" id="dimension-${i}" ${i === 0 ? "open" : ""}><summary><span class="dimension-index">${i + 1}</span><span>${escapeHTML(d.name)}</span><span class="dimension-count" id="count-${i}">0 of 4 answered</span></summary><div class="dimension-body">${d.questions.map((q, qi) => `<fieldset><legend><span class="q-number">Q${qi + 1}</span>${escapeHTML(q.text)}</legend><div class="answers">${q.answers.map((a) => `<label class="answer"><input type="radio" required name="${q.id}" value="${a.value}"><span><span class="answer-value">${a.value}</span> — ${escapeHTML(a.label)}</span></label>`).join("")}</div></fieldset>`).join("")}<div class="dimension-controls"><button type="button" class="secondary" data-step="${i - 1}" ${i === 0 ? "disabled" : ""}>← Previous</button>${i < dimensions.length - 1 ? `<button type="button" class="primary" data-step="${i + 1}">Next: ${escapeHTML(dimensions[i + 1].name)} →</button>` : '<button type="button" class="secondary" id="review-progress">Review completion ↓</button>'}</div></div></details>`,
+              `<details class="dimension" id="dimension-${i}" ${i === 0 ? "open" : ""}><summary><span class="dimension-index">${i + 1}</span><span>${escapeHTML(d.name)}</span><span class="dimension-count" id="count-${i}">0 of ${d.questions.length} answered</span></summary><div class="dimension-body">${d.questions.map((q, qi) => `<fieldset><legend><span class="q-number">Q${qi + 1}</span>${escapeHTML(q.text)}</legend><div class="answers">${q.answers.map((a) => `<label class="answer"><input type="radio" required name="${q.id}" value="${a.value}"><span><span class="answer-value">${a.value}</span> — ${escapeHTML(a.label)}</span></label>`).join("")}</div></fieldset>`).join("")}<div class="dimension-controls"><button type="button" class="secondary" data-step="${i - 1}" ${i === 0 ? "disabled" : ""}>← Previous</button>${i < dimensions.length - 1 ? `<button type="button" class="primary" data-step="${i + 1}">Next: ${escapeHTML(dimensions[i + 1].name)} →</button>` : '<button type="button" class="secondary" id="review-progress">Review completion ↓</button>'}</div></div></details>`,
           )
           .join("");
         document.querySelectorAll(".dimension").forEach((detail, i) =>
